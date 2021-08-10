@@ -1,4 +1,4 @@
-package EstruturaSequencial;
+package sequencial;
 
 public class Funcoes {
 
