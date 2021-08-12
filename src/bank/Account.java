@@ -10,15 +10,15 @@ public class Account {
     }
 
     private int number;
-    private Spring holder;
+    private String holder;
     private double balance;
 
-    public Account(int number, Spring holder) {
+    public Account(int number, String holder) {
         this.number = number;
         this.holder = holder;
     }
 
-    public Account(int number, Spring holder, double initialDeposit) {
+    public Account(int number, String holder, double initialDeposit) {
         this.number = number;
         this.holder = holder;
         deposit(initialDeposit);
@@ -28,11 +28,11 @@ public class Account {
         return number;
     }
 
-    public Spring getHolder() {
+    public String getHolder() {
         return holder;
     }
 
-    public void setHolder(Spring holder) {
+    public void setHolder(String holder) {
         this.holder = holder;
     }
 
@@ -45,6 +45,15 @@ public class Account {
     }
 
     public void withdraw(double amount) {
-        balance -= amount + 5;
+        balance -= amount + 5.0;
+    }
+
+    public String toString() {
+        return "Account "
+                + number
+                + ", Holder: "
+                + holder
+                + ", Balance: $ "
+                + String.format("%.2f", balance);
     }
 }
