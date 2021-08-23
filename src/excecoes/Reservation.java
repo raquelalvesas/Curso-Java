@@ -1,6 +1,6 @@
-package estrutura;
+package excecoes;
 
-public class Main {
+public class Reservation {
 
     public static void main(String[] args) {
 
