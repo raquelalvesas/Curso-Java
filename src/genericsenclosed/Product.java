@@ -1,6 +1,6 @@
 package genericsenclosed;
 
-public class Product {
+public class Product implements Comparable<Product> {
 
     public static void main(String[] args) {
 
@@ -8,7 +8,6 @@ public class Product {
 
     private String name;
     private Double price;
-
 
     public Product(String name, Double price) {
         this.name = name;
@@ -34,5 +33,10 @@ public class Product {
     @Override
     public String toString() {
         return name + ", " + String.format("%.2f", price);
+    }
+
+    @Override
+    public int compareTo(Product other) {
+        return price.compareTo(other.getPrice());
     }
 }
