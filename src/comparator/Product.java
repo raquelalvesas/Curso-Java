@@ -1,22 +1,21 @@
-package map;
-
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Objects;
+package comparator;
 
 public class Product {
 
-    public Product(String tv, double v) {
+    public static void main(String[] args) {
+
     }
 
-        private String name;
-        private Double price;
+    private String name;
+    private Double price;
 
+    public Product() {
+    }
 
     public Product(String name, Double price) {
-            this.name = name;
-            this.price = price;
-        }
+        this.name = name;
+        this.price = price;
+    }
 
     public String getName() {
         return name;
@@ -33,4 +32,10 @@ public class Product {
     public void setPrice(Double price) {
         this.price = price;
     }
+
+    @Override
+    public String toString() {
+        return "Product [name=" + name + ", price=" + price + "]";
+    }
 }
+
