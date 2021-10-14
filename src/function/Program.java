@@ -2,6 +2,7 @@ package function;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Program {
 
@@ -17,9 +18,9 @@ public class Program {
         list.add(new Product("HD Case", 80.90));
         list.add(new Product("Tv", 900.00));
 
+        List<String> names = list.stream().map(new UpperCaseName()).collect(Collectors.toList());
 
-
-
+        names.forEach(System.out::println);
 
     }
 }
